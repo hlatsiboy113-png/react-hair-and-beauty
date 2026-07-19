@@ -1,0 +1,116 @@
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-slow);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl), var(--shadow-glow);
+}
+
+.featured {
+  border: 2px solid transparent;
+  background: linear-gradient(var(--color-white), var(--color-white)) padding-box,
+              var(--gradient-primary) border-box;
+}
+
+.imageWrapper {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-card);
+  opacity: 0.6;
+  transition: opacity var(--transition-base);
+}
+
+.card:hover .overlay {
+  opacity: 0.4;
+}
+
+.price {
+  position: absolute;
+  bottom: var(--space-4);
+  right: var(--space-4);
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  box-shadow: var(--shadow-md);
+}
+
+.content {
+  padding: var(--space-6);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: var(--space-2);
+}
+
+.description {
+  font-size: var(--text-sm);
+  color: var(--color-gray);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+.meta {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--color-gray-light);
+}
+
+.metaItem svg {
+  color: var(--color-pink);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-pink);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  transition: gap var(--transition-base);
+}
+
+.link:hover {
+  gap: var(--space-3);
+}
+
+.link svg {
+  font-size: 0.875em;
+}

@@ -1,0 +1,135 @@
+.booking {
+  padding-top: 80px;
+}
+
+.pageHeader {
+  background: var(--gradient-primary);
+  padding: var(--space-16) 0;
+  text-align: center;
+  position: relative;
+}
+
+.pageHeader::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.pageHeader h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--space-4);
+  position: relative;
+}
+
+.pageHeader p {
+  font-size: var(--text-lg);
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+}
+
+.layout {
+  display: grid;
+  gap: var(--space-12);
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+.formSide {
+  background: var(--color-white);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-lg);
+  height: fit-content;
+}
+
+@media (min-width: 768px) {
+  .formSide {
+    padding: var(--space-12);
+  }
+}
+
+.infoSide {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.infoCard {
+  background: var(--color-white);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-vanilla-dark);
+}
+
+.infoCard h3 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: var(--space-5);
+}
+
+.infoCard h3 svg {
+  color: var(--color-pink);
+}
+
+.infoCard ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.infoCard li {
+  font-size: var(--text-sm);
+  color: var(--color-gray);
+  line-height: 1.6;
+}
+
+.infoCard li strong {
+  color: var(--color-black);
+}
+
+.hours li {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-vanilla-dark);
+}
+
+.hours li:last-child {
+  border-bottom: none;
+}
+
+.whatsappCard {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.whatsappCard h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
+
+.whatsappCard p {
+  font-size: var(--text-sm);
+  opacity: 0.9;
+  margin-bottom: var(--space-6);
+  line-height: 1.6;
+}
